@@ -1,17 +1,20 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{datosPersonales.titulo}}</mat-card-title>
-    <mat-card-subtitle>{{datosPersonales.subtitle}}</mat-card-subtitle>
+    <mat-card-title>{{persona.titulo}}</mat-card-title>
+    <mat-card-subtitle>{{persona.subtitle}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://www.techseria.com/sites/default/files/2018-06/angular_hero_top.png">
   <mat-card-content>
     <p> 
-      {{datosPersonales.content}}
+      {{persona.content}}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>UNLIKE</button>
+    <button mat-button (click)="persona.social.addLike()">LIKE</button>
+    <button mat-button (click)="persona.social.addUnlike()">UNLIKE</button>
   </mat-card-actions>
 </mat-card>
+<p><b>Like: </b>{{persona.social.like}}</p>
+<p><b>Unlike: </b>{{persona.social.unlike}}</p>
+<p><b>Total: </b>{{persona.social.like + persona.social.unlike}} </p>

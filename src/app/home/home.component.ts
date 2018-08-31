@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
-import { Social, DatosPersonales } from '../tarjeta-presentacion/tarjeta-presentacion.component';
 
 
 @Component({
@@ -21,6 +20,3 @@ export class HomeComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 }
-
-var social = new Social("Facebook");
-var datosPersonales = new DatosPersonales("Eduardo Quintero","Desarrollador","Texto de la segunda linea",social);
