@@ -25,3 +25,41 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+1. modelo de datos comun descripcion del usuario
+2. crear archivo con la informacion
+3. modularizacion
+4. la comunicacion entre modulos ( Directivas disccuptivas)
+
+------------------------------
+
+@Input() title:string
+@output() onclick= new EventEmitter<string>();
+
+<button (click)="buttonWasClicked()"></button>
+
+public buttonWasClicked(){
+	this.onclick = alert("");
+	this.onclick.emit();
+}
+
+
+en el component
+
+
+<app-child-component [title]="{{}}" or 
+					 [title]="'titulo generico'" 
+					 (onclick)="childClicked($event)">
+					 
+public childClicked(info :string){
+	cconsole.log(info);
+}
+
+
+<p *ngfor="let c collection; let i = index;let o = odd; let e= even;let f =  first;let l = last ">
+{{c.data}},
+i: {{i}},
+o: {{o}},
+e: {{e}},
+l: {{l}},
+</p>
