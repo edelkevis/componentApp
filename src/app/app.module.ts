@@ -6,12 +6,14 @@ import { TarjetaPresentacionComponent } from './tarjeta-presentacion/tarjeta-pre
 import { HomeComponent } from './home/home.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ModuloImpresionComponent } from './modulo-impresion/modulo-impresion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarjetaPresentacionComponent,
-    HomeComponent
+    HomeComponent,
+    ModuloImpresionComponent
   ],
   imports: [
     BrowserModule,

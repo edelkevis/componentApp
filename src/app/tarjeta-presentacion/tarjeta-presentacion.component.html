@@ -15,6 +15,7 @@
     <button mat-button (click)="persona.social.addUnlike()">UNLIKE</button>
   </mat-card-actions>
 </mat-card>
+<app-modulo-impresion [title]="'Like V2'" [output]="persona.social.like"></app-modulo-impresion>
 <p><b>Like: </b>{{persona.social.like}}</p>
 <p><b>Unlike: </b>{{persona.social.unlike}}</p>
 <p><b>Total: </b>{{persona.social.like + persona.social.unlike}} </p>
