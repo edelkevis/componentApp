@@ -1,10 +1,10 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
+    <div mat-card-avatar [ngStyle]="{'background-image': 'url('+persona.img2+')'}" class="example-header-image"></div>
     <mat-card-title>{{persona.titulo}}</mat-card-title>
     <mat-card-subtitle>{{persona.subtitle}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://www.techseria.com/sites/default/files/2018-06/angular_hero_top.png">
+  <img mat-card-image src="{{persona.img}}">
   <mat-card-content>
     <p> 
       {{persona.content}}

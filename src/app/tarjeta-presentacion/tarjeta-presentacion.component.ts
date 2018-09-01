@@ -9,7 +9,12 @@ export class TarjetaPresentacionComponent implements OnInit {
   public social = new Social("Linkenid");
   //public lstsocial:Social[] = [this.social];
   
-  public persona = new Persona("Eduardo L Quintero","Desarrollador","casdadas","src","src2",this.social);
+  public persona = new Persona("Eduardo L Quintero",
+  "Desarrollador",
+  "Descripcion",
+  "https://www.techseria.com/sites/default/files/2018-06/angular_hero_top.png",
+  "https://cdn.freebiesupply.com/logos/large/2x/angular-icon-logo-png-transparent.png",
+  this.social);
   constructor() { 
     
   }
